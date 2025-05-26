@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { Book } from './book';
 
 @Component({
   selector: 'app-book',
@@ -7,9 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './book.component.css'
 })
 export class BookComponent {
-  book = {
-    title: "As ondas",
-    author: "Virginia Woolf",
-    image: "https://images-na.ssl-images-amazon.com/images/I/41sRHT1sFeL.jpg"
+
+  book = input.required<Book>();
+
+  setFavorite(){
+    this.book().favorite = !this.book().favorite
   }
+ 
 }
