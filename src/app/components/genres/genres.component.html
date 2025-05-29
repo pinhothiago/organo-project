@@ -1,1 +1,17 @@
-<app-book [book]="book"></app-book>
+<section class="genres" [ngClass]="genre().id">
+    <h3 class="text-h3-grey">
+        {{genre().value}}
+    </h3>
+    <span class="highlight-line highlight-line--small" [ngClass]=" genre().id"></span>
+    @if(genre().books.length === 0){
+    <div class=" text-without-books">
+        <img src="books.png" alt="Without books">
+        <p>Não há livros nesse gênero ainda.</p>
+    </div>
+    }
+    <div class="books-genre">
+        @for (book of genre().books; track book) {
+        <app-book [book]="book"></app-book>
+        }
+    </div>
+</section>

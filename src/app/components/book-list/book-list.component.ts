@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { books } from '../../mock-books';
 import { Book, Genre } from '../book/book';
+import { GenresComponent } from "../genres/genres.component";
 
 @Component({
   selector: 'app-book-list',
-  imports: [],
+  imports: [GenresComponent],
   templateUrl: './book-list.component.html',
   styleUrl: './book-list.component.css'
 })
@@ -30,24 +31,24 @@ export class BookListComponent implements OnInit {
         books: this.booksByGenre.get('romance') ?? []
       },
       {
-        id: 'misterio',
+        id: 'mistery',
         value: 'Mistério',
-        books: this.booksByGenre.get("misterio") ?? []
+        books: this.booksByGenre.get("mistery") ?? []
       },
       {
-        id: 'fantasia',
+        id: 'fantasy',
         value: 'Fantasia',
-        books: this.booksByGenre.get("fantasia") ?? []
+        books: this.booksByGenre.get("fantasy") ?? []
       },
       {
-        id: 'ficcao-cientifica',
+        id: 'science-fiction',
         value: 'Ficção Científica',
-        books: this.booksByGenre.get("ficcao-cientifica") ?? []
+        books: this.booksByGenre.get("science-fiction") ?? []
       },
       {
-        id: 'tecnicos',
+        id: 'technical',
         value: 'Técnicos',
-        books: this.booksByGenre.get("tecnicos") ?? []
+        books: this.booksByGenre.get("technical") ?? []
       },
     ]
     console.log(this.booksByGenre)

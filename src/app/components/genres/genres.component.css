@@ -1,0 +1,77 @@
+.genres {
+    display: flex;
+    flex-direction: column;
+    padding: 48px 160px;
+}
+
+.books-genre {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.highlight-line--small {
+    width: 32px;
+}
+
+.text-h3-grey {
+    font-family: var(--font-prata);
+    font-size: 28px;
+    font-weight: var(--font-weight-normal);
+    line-height: 38px;
+    text-align: center;
+}
+
+.without-books img {
+    width: 150px;
+    margin-top: 8px;
+    opacity: 0.8;
+}
+
+.text-without-books {
+    text-align: center;
+    margin-top: 16px;
+    color: #3b3b3b;
+    font-size: 20px;
+}
+
+.romance {
+    background-color: #E8FFFF;
+}
+
+.genres .romance {
+    border-bottom: 4px solid #82CFFA;
+}
+
+.mistery {
+    background-color: #E9FFE3;
+}
+
+.genres .mistery {
+    border-bottom: 4px solid #A6D157;
+}
+
+.fantasy {
+    background-color: #FFE3E3;
+}
+
+.genres .fantasy {
+    border-bottom: 4px solid #E06B69;
+}
+
+.science-fiction {
+    background-color: #f8e5f2;
+}
+
+.genres .science-fiction {
+    border-bottom: 4px solid #DB6EBF;
+}
+
+.technical {
+    background-color: #FFF1E4;
+}
+
+.genres .technical {
+    border-bottom: 4px solid #FF8A29;
+}

@@ -4,3 +4,7 @@
     </h2>
     <span class="highlight-line highlight-line--big"></span>
 </section>
+
+@for(genre of genres; track genre){
+<app-genres [genre]="genre"></app-genres>
+}
